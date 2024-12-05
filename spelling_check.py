@@ -4,6 +4,9 @@ spell = SpellChecker()
 
 # Find misspelled words
 def find_misspelled_words(file):
+
+    
+
     for text in file.values():
 
     
@@ -11,6 +14,6 @@ def find_misspelled_words(file):
 
         for word in misspelled:
             # Get the most likely correction
-            print(f"{word} -> {spell.correction(word)}")
-
-
+            
+            if spell.correction(word)!=None:
+                print(f"{word} -> {spell.correction(word)}")
